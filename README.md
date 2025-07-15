@@ -1,0 +1,1 @@
+# Building a next.js frontend with strapi backend. modern website.
