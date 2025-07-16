@@ -8,11 +8,16 @@ async function loader() {
   const data = await response.json();
   console.log("Data: ", data);
 
-  return { data };
+  return { ...data.data };
 }
 
 export default async function HomeRoute() {
   const data = await loader();
 
-  return <div>Hello</div>;
+  return (
+    <div>
+      <h1>{data.title}</h1>
+      <p>{data.description}</p>
+    </div>
+  );
 }
